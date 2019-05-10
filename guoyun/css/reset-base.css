@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/*!
+ * @名称：reset-base.css
+ * @功能：1、重设浏览器默认样式
+ *       2、设置通用原子类
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, span, applet, object, iframe, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, big, small, cite, code, del, strike, dfn, em, strong, img, ins, kbd, q, s, samp, sup, sub, tt, var, b, u, i, label, canvas, caption, footer, header, hgroup, menu, nav, output, audio, video, mark, section, form, figure, figcaption, details, fieldset, article, aside, input, optgroup, textarea, blockquote, p, a, abbr, acronym, address, legend, button, table, th, td, summary, progress {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    /*设置根元素字体大小为 10px*/
+    font-size: 20px;
+    /****使页面上的字体抗锯齿****/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    /*****关闭字体大小自动调整功能****/
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /** 当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色**/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: "Microsoft YaHei", "SimSun", Verdana, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+}
+
+
+/*p {margin-bottom: .7em;}*/
+
+article, section, footer, header, aside, nav, menu, figure, figcaption, hgroup, main, details, summary {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a:hover, a:active, a, a:link, a:visited {
+    outline: 0 none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+textarea, pre {
+    overflow: auto;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+
+/*q:before, q:after {
+    content:" ";
+}*/
+
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+button, input, select, textarea {
+    font: inherit;
+    line-height: inherit;
+}
+
+
+/*统一按钮样式*/
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+    cursor: default;
+}
+
+
+/*解决Firefox浏览器表单框左右空出较多的问题*/
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+/* 去掉 table cell 的边距并让其边重合 */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* IE bug：th 不继承 text-align */
+
+th {
+    text-align: inherit;
+}
+
+
+/* IE6 7 8(q) bug 显示为行内表现 */
+
+iframe {
+    display: block;
+}
+
+
+/* 去掉 firefox 下此元素的边框 */
+
+abbr, acronym {
+    border: none;
+    font-variant: normal;
+}
+
+
+/* 一致的 del 样式 */
+
+del {
+    text-decoration: line-through;
+}
+
+
+/* 来自yahoo，让标题都自定义，适应多个系统应用 */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+
+/* 统一上标和下标 */
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
